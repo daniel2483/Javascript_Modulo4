@@ -1,4 +1,4 @@
-var arrayNumber1=[],arrayNumber2=[],maxDigitos=8,stringDisplay = "";
+var arrayNumber1=[],arrayNumber2=[],maxDigitos=8,stringDisplay = "",signo=[];
 
 // Objeto calculadora
 var calculadora = {
@@ -263,7 +263,7 @@ var calculadora = {
     var boton9 = document.getElementById("9");
     boton9.style="height:58px !important";
     arrayNumber1.push(9);
-    this.ValorRegistrado;
+    calculadora.ValorRegistrado();
   },
   Boton9: function(){
     var boton9 = document.getElementById("9");
@@ -327,16 +327,7 @@ var calculadora = {
     botonIgual.style="";
   },
   ValorRegistrado: function(){
-    stringDisplay = "";
-    if(arrayNumber1.length <= 8){
-      console.log(arrayNumber1.length);
-      //alert("Ingresa");
 
-      for( i=0 ; i < arrayNumber1.length ; i++ ){
-        stringDisplay = stringDisplay + arrayNumber1[i];
-      }
-      document.getElementById('display').innerHTML = stringDisplay;
-    }
   },
   ReduceSize: function(){
 
